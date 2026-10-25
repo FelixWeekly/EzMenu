@@ -1,0 +1,1455 @@
+{
+  "_comment": "预置菜谱。文案逐字取自 reference/*/code.html。带 \"inferred\": true 的条目其食材与步骤是按同类菜谱合理补写的（设计稿只给了它们的标题、时长、标签、作者与点评），并非设计稿原文。",
+  "recipes": [
+    {
+      "title": "香煎迷迭香脆皮三文鱼排",
+      "subtitle": "外脆里嫩 · 高蛋白低碳水轻食经典",
+      "cover": "drawable:recipe_salmon_hero",
+      "cookTimeMinutes": 18,
+      "baseServings": 2,
+      "difficulty": "新手友好",
+      "calories": null,
+      "author": "林间小肆",
+      "category": "轻卡减脂",
+      "heroBadge": "主厨推荐 · 地中海轻食",
+      "heroKicker": "Seafood Classic",
+      "heroCta": "开煮",
+      "footerNote": "轻松快手",
+      "equipment": "平底铸铁锅",
+      "isFavorite": false,
+      "cookCount": 0,
+      "editorial": {
+        "chefTipTitle": "主厨关键贴士 (Chef's Tips)",
+        "chefTipBody": "煎鱼皮时切勿频繁翻动，待变色达半程再翻面，肉质方能保留饱满丰盈汁水。",
+        "heatNote": "中大火烧热，转文火慢煎",
+        "attentionNote": "鱼皮朝下贴锅底，3分钟内请勿翻动"
+      },
+      "tags": [
+        {
+          "name": "轻卡减脂",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "高蛋白",
+          "kind": "DIET"
+        },
+        {
+          "name": "铸铁煎",
+          "kind": "SCENE"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "三文鱼排（带皮）",
+              "base": 2,
+              "unit": "块",
+              "gramsPerUnit": 175
+            },
+            {
+              "name": "芦笋与小番茄",
+              "base": 120,
+              "unit": "g"
+            },
+            {
+              "name": "新鲜迷迭香",
+              "base": 2,
+              "unit": "枝"
+            },
+            {
+              "name": "优质柠檬",
+              "base": 1,
+              "unit": "个"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "特级初榨橄榄油",
+              "base": 15,
+              "unit": "ml"
+            },
+            {
+              "name": "研磨海盐与黑胡椒碎",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "准备鱼排与配菜",
+          "body": "鱼排去鳞、拔净鱼刺并吸干表面。清洗芦笋与小番茄，准备好柠檬与迷迭香。"
+        },
+        {
+          "title": "腌制入味",
+          "body": "三文鱼吸干水分，均匀涂抹海盐与黑胡椒碎，放上新鲜迷迭香常温腌制 10 分钟。",
+          "chipLabel": "约 10 分钟",
+          "image": "drawable:step_salmon_marinate",
+          "timerSeconds": 600,
+          "timerLabel": "腌制静置",
+          "noteText": "吸干表面水分是脆皮关键"
+        },
+        {
+          "title": "控温慢煎",
+          "body": "橄榄油烧热，鱼皮朝下慢煎，轻压鱼身确保受热均匀，直至鱼皮酥脆金黄。",
+          "chipLabel": "火候精准",
+          "timerSeconds": 180,
+          "timerLabel": "单面慢煎推荐时延",
+          "noteText": "文火慢烘 加盖松软",
+          "bullets": [
+            "平底锅注入 **15ml 橄榄油**，中大火热至微泛油纹 (180°C)。",
+            "鱼皮朝下轻压入锅，轻压鱼身 **5秒** 防卷并放入迷迭香。",
+            "启动计时 **03:00**，静待金黄酥脆，侧面白 1/3 时翻面。"
+          ],
+          "materials": [
+            "橄榄油 15ml",
+            "迷迭香 2枝",
+            "厚切三文鱼 200g"
+          ]
+        },
+        {
+          "title": "翻面与添香",
+          "body": "待侧面变白过半后翻面，放入小番茄与芦笋煎熟，出锅前淋柠檬汁提鲜。",
+          "chipLabel": "封边出锅",
+          "image": "drawable:step_salmon_plate",
+          "noteText": "淋汁提鲜趁热上桌"
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ]
+    },
+    {
+      "title": "法式普罗旺斯慢炖番茄牛腩",
+      "subtitle": "慢火熟成 · 番茄与香草的醇厚交响",
+      "cover": "drawable:recipe_beef_stew",
+      "cookTimeMinutes": 20,
+      "baseServings": 2,
+      "difficulty": "适中",
+      "calories": null,
+      "author": "旬味厨房",
+      "category": "旬味暖炖",
+      "heroBadge": "主厨甄选 · 20分钟",
+      "heroKicker": "慢炖经典",
+      "heroNote": "慢火熟成 20m",
+      "heroCta": "开煮",
+      "footerNote": "慢火醇香",
+      "equipment": "珐琅铸铁锅",
+      "cookCount": 0,
+      "editorial": {
+        "heatNote": "先大火收汁，再转小火慢煨",
+        "chefTipTitle": "主厨关键贴士 (Chef's Tips)",
+        "chefTipBody": "牛腩先煎至表面焦褐再炖，美拉德反应带来的香气是这道菜的灵魂。"
+      },
+      "tags": [
+        {
+          "name": "旬味暖炖",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "慢炖经典",
+          "kind": "SCENE"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "牛腩",
+              "base": 400,
+              "unit": "g"
+            },
+            {
+              "name": "熟成番茄",
+              "base": 4,
+              "unit": "个"
+            },
+            {
+              "name": "新鲜百里香",
+              "base": 2,
+              "unit": "枝"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "特级初榨橄榄油",
+              "base": 20,
+              "unit": "ml"
+            },
+            {
+              "name": "海盐与黑胡椒",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "准备炖煮食材",
+          "body": "牛腩切成大小相近的块，番茄切块。准备好厚底炖锅和足量热水。"
+        },
+        {
+          "title": "煎香牛腩",
+          "body": "牛腩切大块吸干水分，热锅少油煎至每面焦褐，形成焦香。",
+          "chipLabel": "约 8 分钟",
+          "timerSeconds": 480,
+          "timerLabel": "煎香用时",
+          "noteText": "焦褐层越足，汤色越醇",
+          "inferred": true
+        },
+        {
+          "title": "番茄慢煨",
+          "body": "下番茄与百里香翻炒出沙，加热水没过食材，小火慢煨至牛腩酥软。",
+          "chipLabel": "慢火熟成",
+          "timerSeconds": 1200,
+          "timerLabel": "慢煨推荐时延",
+          "noteText": "保持微沸即可",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ],
+      "isFavorite": false
+    },
+    {
+      "title": "香煎迷迭香三文鱼排",
+      "subtitle": "金黄脆皮 · 迷迭香与海盐的清晨滋味",
+      "cover": "drawable:recipe_salmon_card",
+      "cookTimeMinutes": 15,
+      "baseServings": 2,
+      "difficulty": "新手友好",
+      "calories": null,
+      "author": "林间小肆",
+      "category": "轻卡减脂",
+      "heroCta": "开煮",
+      "footerNote": "轻松快手",
+      "cookCount": 0,
+      "tags": [
+        {
+          "name": "轻卡减脂",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "高蛋白",
+          "kind": "DIET"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "三文鱼排",
+              "base": 2,
+              "unit": "块",
+              "gramsPerUnit": 160
+            },
+            {
+              "name": "新鲜迷迭香",
+              "base": 2,
+              "unit": "枝"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "粗粒海盐",
+              "raw": "适量"
+            },
+            {
+              "name": "黑胡椒碎",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "吸干鱼排表面",
+          "body": "检查并去除鱼刺，用厨房纸吸干水分，避免下锅时油水飞溅。"
+        },
+        {
+          "title": "抹盐静置",
+          "body": "鱼排两面抹海盐与黑胡椒，静置 5 分钟让底味进入。",
+          "chipLabel": "约 5 分钟",
+          "timerSeconds": 300,
+          "noteText": "静置后再下锅更入味",
+          "inferred": true
+        },
+        {
+          "title": "脆皮煎制",
+          "body": "迷迭香入油爆香，鱼皮朝下慢煎至酥脆，翻面继续煎制，直到鱼肉达到合适熟度后出锅。",
+          "chipLabel": "火候精准",
+          "timerSeconds": 180,
+          "timerLabel": "单面煎制时延",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ],
+      "isFavorite": false
+    },
+    {
+      "title": "酥嫩日式唐扬鸡块",
+      "subtitle": "外壳酥脆 · 柠檬与蛋黄酱的经典搭配",
+      "cover": "drawable:recipe_karaage",
+      "cookTimeMinutes": 25,
+      "baseServings": 2,
+      "difficulty": "新手友好",
+      "calories": null,
+      "author": "深夜食堂",
+      "category": "空气炸锅",
+      "heroCta": "开煮",
+      "footerNote": "低脂少油",
+      "cookCount": 0,
+      "tags": [
+        {
+          "name": "空气炸锅",
+          "kind": "SCENE"
+        },
+        {
+          "name": "低脂少油",
+          "kind": "DIET"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "去骨鸡腿肉",
+              "base": 300,
+              "unit": "g"
+            },
+            {
+              "name": "柠檬",
+              "base": 1,
+              "unit": "个"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "日式酱油",
+              "base": 15,
+              "unit": "ml"
+            },
+            {
+              "name": "姜蒜泥",
+              "base": 1,
+              "unit": "勺"
+            },
+            {
+              "name": "木薯淀粉",
+              "base": 40,
+              "unit": "g"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "处理鸡腿肉",
+          "body": "鸡腿肉去骨后切成大小相近的块，沥干水分。生肉使用的刀具和砧板单独清洗。"
+        },
+        {
+          "title": "腌制入味",
+          "body": "鸡腿肉切块，加酱油、姜蒜泥抓匀，冷藏腌制 15 分钟。",
+          "chipLabel": "约 15 分钟",
+          "timerSeconds": 900,
+          "noteText": "冷藏腌制更入味",
+          "inferred": true
+        },
+        {
+          "title": "裹粉空气炸",
+          "body": "鸡块裹薄层木薯淀粉，喷少量油，空气炸锅 200°C 炸至金黄。",
+          "chipLabel": "空气炸锅",
+          "timerSeconds": 600,
+          "timerLabel": "空气炸时延",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "取出最厚的一块，确认内部已经完全熟透；未熟时继续加热。趁热装盘，记录这次的口味和下次想调整的地方。"
+        }
+      ],
+      "isFavorite": false
+    },
+    {
+      "title": "牛油果溏心蛋酸种吐司",
+      "subtitle": "晨光里的柔软与绵密",
+      "cover": "drawable:recipe_avocado_toast",
+      "cookTimeMinutes": 10,
+      "baseServings": 1,
+      "difficulty": "新手友好",
+      "calories": null,
+      "author": "阿瓦厨房",
+      "category": "元气早餐",
+      "heroCta": "开煮",
+      "footerNote": "唤醒清晨",
+      "cookCount": 0,
+      "tags": [
+        {
+          "name": "元气早餐",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "早午餐",
+          "kind": "SEASON"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "酸种吐司",
+              "base": 1,
+              "unit": "片"
+            },
+            {
+              "name": "熟成牛油果",
+              "base": 1,
+              "unit": "个"
+            },
+            {
+              "name": "可生食鸡蛋",
+              "base": 1,
+              "unit": "颗"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "辣椒碎与微苗",
+              "raw": "适量"
+            },
+            {
+              "name": "海盐",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "准备配料",
+          "body": "牛油果切开去核，挖出果肉并压碎。准备吐司与煮蛋用的水。"
+        },
+        {
+          "title": "溏心蛋",
+          "body": "水沸后下蛋煮 6 分 30 秒，立刻过冰水，剥壳对切。",
+          "chipLabel": "约 7 分钟",
+          "timerSeconds": 390,
+          "timerLabel": "溏心蛋时延",
+          "noteText": "冰水急冷才好剥壳",
+          "inferred": true
+        },
+        {
+          "title": "组装吐司",
+          "body": "吐司烤至微焦，抹上压碎的牛油果，摆上溏心蛋，撒辣椒碎与海盐。",
+          "chipLabel": "快手组装",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ],
+      "isFavorite": false
+    },
+    {
+      "title": "松露燕麦低卡菌菇浓汤",
+      "subtitle": "丝绒质地 · 纯素友好的暖胃之选",
+      "cover": "drawable:recipe_mushroom_soup",
+      "cookTimeMinutes": 18,
+      "baseServings": 2,
+      "difficulty": "新手友好",
+      "calories": null,
+      "author": "素履日食",
+      "category": "旬味暖炖",
+      "heroCta": "开煮",
+      "footerNote": "纯素友好",
+      "cookCount": 0,
+      "tags": [
+        {
+          "name": "旬味暖炖",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "暖胃轻食",
+          "kind": "DIET"
+        },
+        {
+          "name": "纯素友好",
+          "kind": "DIET"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "混合野生菌菇",
+              "base": 250,
+              "unit": "g"
+            },
+            {
+              "name": "燕麦奶",
+              "base": 200,
+              "unit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "松露油",
+              "base": 1,
+              "unit": "勺"
+            },
+            {
+              "name": "黑胡椒碎",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "清理菌菇",
+          "body": "菌菇去除根部泥沙，洗净沥干后切片。燕麦奶提前量好备用。"
+        },
+        {
+          "title": "炒香菌菇",
+          "body": "菌菇切片，热锅干煸至出水收干，再加少许油炒出焦香。",
+          "chipLabel": "约 8 分钟",
+          "timerSeconds": 480,
+          "noteText": "干煸逼水是香气来源",
+          "inferred": true
+        },
+        {
+          "title": "打成浓汤",
+          "body": "加入燕麦奶小火加热，用料理棒打成细腻浓汤，出锅淋松露油。",
+          "chipLabel": "丝绒质地",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ],
+      "isFavorite": false
+    },
+    {
+      "title": "香煎迷迭香法式羊排",
+      "subtitle": "外焦里嫩，薄荷风味酱搭配天然海盐与黄油乳化，锁住鲜嫩汁水。",
+      "cover": "drawable:recipe_lamb_chops",
+      "cookTimeMinutes": 20,
+      "baseServings": 2,
+      "difficulty": "适中",
+      "calories": null,
+      "author": "旬味厨房",
+      "category": "周末宴客",
+      "heroCta": "进入开煮",
+      "footerNote": "周末宴客",
+      "equipment": "铸铁煎锅",
+      "isFavorite": false,
+      "cookCount": 0,
+      "tags": [
+        {
+          "name": "周末宴客",
+          "kind": "SCENE"
+        },
+        {
+          "name": "高蛋白",
+          "kind": "DIET"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "法式羊排",
+              "base": 4,
+              "unit": "根"
+            },
+            {
+              "name": "新鲜迷迭香",
+              "base": 2,
+              "unit": "枝"
+            },
+            {
+              "name": "薄荷叶",
+              "base": 10,
+              "unit": "片"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "无盐黄油",
+              "base": 20,
+              "unit": "g"
+            },
+            {
+              "name": "天然海盐",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "准备羊排与香草",
+          "body": "羊排吸干表面水分，检查骨边碎屑。香草洗净沥干，准备平底锅。"
+        },
+        {
+          "title": "回温与调味",
+          "body": "羊排提前 20 分钟回温，两面撒海盐与黑胡椒。",
+          "chipLabel": "约 20 分钟",
+          "timerSeconds": 1200,
+          "timerLabel": "回温时延",
+          "noteText": "回温到位受热才均匀",
+          "inferred": true
+        },
+        {
+          "title": "高温封边",
+          "body": "铸铁锅充分预热，羊排下锅每面各煎 2 分钟，加入黄油与迷迭香淋浇。",
+          "chipLabel": "封边出锅",
+          "timerSeconds": 240,
+          "timerLabel": "单面煎制时延",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ]
+    },
+    {
+      "title": "慢炖勃艮第牛肉",
+      "subtitle": "红酒果酸软化牛腱",
+      "cover": "drawable:recipe_burgundy",
+      "cookTimeMinutes": 120,
+      "baseServings": 4,
+      "difficulty": "进阶",
+      "calories": null,
+      "author": "旬味厨房",
+      "category": "旬味暖炖",
+      "heroCta": "开煮",
+      "footerNote": "暖汤砂锅",
+      "isFavorite": false,
+      "cookCount": 0,
+      "tags": [
+        {
+          "name": "旬味暖炖",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "周末宴客",
+          "kind": "SCENE"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "牛腱肉",
+              "base": 600,
+              "unit": "g"
+            },
+            {
+              "name": "小洋葱",
+              "base": 8,
+              "unit": "个"
+            },
+            {
+              "name": "胡萝卜",
+              "base": 2,
+              "unit": "根"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "勃艮第红酒",
+              "base": 400,
+              "unit": "ml"
+            },
+            {
+              "name": "培根丁",
+              "base": 80,
+              "unit": "g"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "准备牛肉与蔬菜",
+          "body": "牛肉切成大小相近的块并吸干，洋葱、胡萝卜与菌菇分别处理备用。"
+        },
+        {
+          "title": "煎香牛腱",
+          "body": "牛腱切大块吸干水分，与培根丁一同煎至表面焦褐。",
+          "chipLabel": "约 15 分钟",
+          "timerSeconds": 900,
+          "inferred": true
+        },
+        {
+          "title": "红酒慢炖",
+          "body": "倒入红酒与高汤，加洋葱胡萝卜，小火慢炖至牛肉叉子一碰即散。",
+          "chipLabel": "慢火熟成",
+          "timerSeconds": 7200,
+          "timerLabel": "慢炖推荐时延",
+          "noteText": "中途不要频繁开盖",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ]
+    },
+    {
+      "title": "黑松露野菌手打意面",
+      "subtitle": "手工宽面与香浓菌香",
+      "cover": "drawable:recipe_truffle_pasta",
+      "cookTimeMinutes": 25,
+      "baseServings": 2,
+      "difficulty": "适中",
+      "calories": null,
+      "author": "旬味厨房",
+      "category": "快手便当",
+      "heroCta": "开煮",
+      "footerNote": "快手便当",
+      "isFavorite": false,
+      "cookCount": 0,
+      "tags": [
+        {
+          "name": "快手便当",
+          "kind": "SCENE"
+        },
+        {
+          "name": "高蛋白",
+          "kind": "DIET"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "手打宽面",
+              "base": 200,
+              "unit": "g"
+            },
+            {
+              "name": "混合野菌",
+              "base": 150,
+              "unit": "g"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "黑松露酱",
+              "base": 1,
+              "unit": "勺"
+            },
+            {
+              "name": "帕玛森芝士",
+              "base": 30,
+              "unit": "g"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "备好菌菇与面条",
+          "body": "菌菇洗净切片，备好芝士与黑松露酱。烧一大锅水，按包装说明安排煮面时间。"
+        },
+        {
+          "title": "煮面留汤",
+          "body": "宽面煮至八分熟，留一杯煮面水备用。",
+          "chipLabel": "约 6 分钟",
+          "timerSeconds": 360,
+          "timerLabel": "煮面时延",
+          "noteText": "煮面水是乳化关键",
+          "inferred": true
+        },
+        {
+          "title": "菌香乳化",
+          "body": "野菌炒香，加煮面水与芝士乳化，拌入宽面与黑松露酱。",
+          "chipLabel": "快炒收汁",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ]
+    },
+    {
+      "title": "清甜马蹄竹蔗牛腩煲",
+      "subtitle": "慢火砂锅浓郁清甜，马蹄爽脆生津",
+      "cover": "drawable:recipe_brisket_pot",
+      "cookTimeMinutes": 45,
+      "baseServings": 3,
+      "difficulty": "适中",
+      "calories": null,
+      "author": "旬味厨房",
+      "category": "旬味暖炖",
+      "heroCta": "开煮",
+      "footerNote": "45 min · 适中",
+      "isFavorite": false,
+      "cookCount": 0,
+      "tags": [
+        {
+          "name": "旬味暖炖",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "粤式砂锅",
+          "kind": "SCENE"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "牛腩",
+              "base": 500,
+              "unit": "g"
+            },
+            {
+              "name": "马蹄",
+              "base": 8,
+              "unit": "个"
+            },
+            {
+              "name": "竹蔗",
+              "base": 2,
+              "unit": "根"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "陈皮",
+              "base": 1,
+              "unit": "片"
+            },
+            {
+              "name": "海盐",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "清洗配料",
+          "body": "马蹄去皮，竹蔗洗净切段，姜切片。牛腩切块后准备焯水。"
+        },
+        {
+          "title": "焯水去腥",
+          "body": "牛腩冷水下锅焯净血沫，捞出用温水冲净。",
+          "chipLabel": "约 10 分钟",
+          "timerSeconds": 600,
+          "inferred": true
+        },
+        {
+          "title": "砂锅慢煲",
+          "body": "所有材料入砂锅加水没过，大火烧开转小火慢煲至牛腩软烂清甜。",
+          "chipLabel": "慢火熟成",
+          "timerSeconds": 2700,
+          "timerLabel": "慢煲推荐时延",
+          "noteText": "竹蔗带来天然清甜",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ]
+    },
+    {
+      "title": "香脆油封鸭腿配小扁豆",
+      "subtitle": "外皮酥脆金黄，慢浸油封肉质丝丝入味",
+      "cover": "drawable:recipe_duck_confit",
+      "cookTimeMinutes": 35,
+      "baseServings": 2,
+      "difficulty": "进阶",
+      "calories": null,
+      "author": "旬味厨房",
+      "category": "周末宴客",
+      "heroCta": "开煮",
+      "footerNote": "35 min · 烤箱",
+      "isFavorite": false,
+      "cookCount": 0,
+      "tags": [
+        {
+          "name": "周末宴客",
+          "kind": "SCENE"
+        },
+        {
+          "name": "法式经典",
+          "kind": "SCENE"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "熟制油封鸭腿",
+              "base": 2,
+              "unit": "只"
+            },
+            {
+              "name": "小扁豆",
+              "base": 150,
+              "unit": "g"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "鸭油",
+              "base": 30,
+              "unit": "g"
+            },
+            {
+              "name": "百里香",
+              "base": 2,
+              "unit": "枝"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "准备熟制鸭腿",
+          "body": "本食谱使用已熟制的油封鸭腿。按包装要求解冻或回温，小扁豆洗净备用。"
+        },
+        {
+          "title": "煎脆鸭皮",
+          "body": "鸭腿皮朝下入冷锅，中小火慢煎至皮下脂肪溶出、表皮金黄酥脆。",
+          "chipLabel": "火候精准",
+          "timerSeconds": 720,
+          "timerLabel": "煎脆时延",
+          "noteText": "冷锅下锅皮才不缩",
+          "inferred": true
+        },
+        {
+          "title": "烤箱收尾",
+          "body": "移入 200°C 烤箱烤 10 分钟，同时将小扁豆用鸭油与百里香煨熟装盘。",
+          "chipLabel": "烤箱收尾",
+          "timerSeconds": 600,
+          "timerLabel": "烤箱时延",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ]
+    },
+    {
+      "title": "焦糖肉桂法式吐司",
+      "subtitle": "金黄酥脆包裹云朵蛋香，唤醒周末晨光",
+      "story": "金黄酥脆包裹云朵蛋香，唤醒周末晨光",
+      "cover": "drawable:recipe_french_toast",
+      "cookTimeMinutes": 30,
+      "baseServings": 2,
+      "difficulty": "新手友好",
+      "category": "元气早餐",
+      "footerNote": "唤醒周末晨光",
+      "isDraft": true,
+      "tags": [
+        {
+          "name": "元气早餐",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "早午餐",
+          "kind": "SEASON"
+        }
+      ],
+      "groups": [
+        {
+          "name": "备料清单",
+          "ingredients": [
+            {
+              "name": "厚切吐司",
+              "base": 2,
+              "unit": "片"
+            },
+            {
+              "name": "鲜牛奶",
+              "base": 80,
+              "unit": "ml"
+            },
+            {
+              "name": "有机鸡蛋",
+              "base": 1,
+              "unit": "颗"
+            },
+            {
+              "name": "黄油 (煎制用)",
+              "base": 15,
+              "unit": "克"
+            },
+            {
+              "name": "肉桂粉与细砂糖",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "备好厚吐司",
+          "body": "吐司切成厚度相近的片，鸡蛋打散。准备牛奶、肉桂粉与平底锅。"
+        },
+        {
+          "title": "蛋奶液充分浸润",
+          "body": "将鸡蛋、鲜牛奶与少许肉桂粉搅打均匀。吐司切厚片后两面均匀浸泡蛋奶液各3分钟。",
+          "timerSeconds": 180,
+          "noteText": "建议吸透面包芯"
+        },
+        {
+          "title": "低温融化黄油慢煎",
+          "body": "铸铁锅小火融化黄油直至冒出细密香泡，放入浸透吐司，盖上锅盖文火慢煎至金黄翻面。",
+          "timerSeconds": 300,
+          "noteText": "文火慢烘 加盖松软"
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ],
+      "calories": null,
+      "isFavorite": false,
+      "cookCount": 0
+    },
+    {
+      "title": "番茄浓汤炖嫩豆腐",
+      "subtitle": "酸甜温润 · 耗时 12m",
+      "cookTimeMinutes": 12,
+      "baseServings": 2,
+      "difficulty": "新手友好",
+      "calories": null,
+      "category": "轻卡减脂",
+      "heroCta": "浏览",
+      "footerNote": "温润舒胃",
+      "tags": [
+        {
+          "name": "轻卡减脂",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "温润舒胃",
+          "kind": "DIET"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "嫩豆腐",
+              "base": 1,
+              "unit": "盒"
+            },
+            {
+              "name": "西红柿",
+              "base": 2,
+              "unit": "个"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "海盐",
+              "raw": "适量"
+            },
+            {
+              "name": "白胡椒",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "准备番茄与豆腐",
+          "body": "番茄洗净切块，嫩豆腐沥去包装水并切成适口大小。"
+        },
+        {
+          "title": "番茄出沙",
+          "body": "西红柿切块炒至软烂出沙，加热水煮成浓汤。",
+          "chipLabel": "约 6 分钟",
+          "timerSeconds": 360,
+          "inferred": true
+        },
+        {
+          "title": "下豆腐",
+          "body": "嫩豆腐切块滑入汤中，小火煮至入味，调味出锅。",
+          "chipLabel": "轻煮入味",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ],
+      "isFavorite": false,
+      "cookCount": 0
+    },
+    {
+      "title": "无油西红柿炒蛋",
+      "subtitle": "滑嫩甘鲜 · 耗时 8m",
+      "cookTimeMinutes": 8,
+      "baseServings": 2,
+      "difficulty": "新手友好",
+      "calories": null,
+      "category": "轻卡减脂",
+      "heroCta": "浏览",
+      "footerNote": "低卡高蛋白",
+      "tags": [
+        {
+          "name": "轻卡减脂",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "低卡高蛋白",
+          "kind": "DIET"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "西红柿",
+              "base": 2,
+              "unit": "个"
+            },
+            {
+              "name": "鸡蛋",
+              "base": 3,
+              "unit": "颗"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "海盐",
+              "raw": "适量"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "处理番茄与鸡蛋",
+          "body": "番茄洗净切块，鸡蛋充分打散。选择状态良好的不粘锅。"
+        },
+        {
+          "title": "无油滑蛋",
+          "body": "不粘锅烧热，蛋液直接下锅用硅胶铲推成滑蛋盛出。",
+          "chipLabel": "约 3 分钟",
+          "timerSeconds": 180,
+          "inferred": true
+        },
+        {
+          "title": "番茄同炒",
+          "body": "番茄下锅炒出汁，倒回滑蛋快速翻匀即可。",
+          "chipLabel": "快炒出锅",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ],
+      "isFavorite": false,
+      "cookCount": 0
+    },
+    {
+      "title": "腌笃鲜 · 咸香春鲜",
+      "subtitle": "鲜笃初春 · 春笋当令",
+      "cover": "drawable:recipe_spring_soup",
+      "cookTimeMinutes": 60,
+      "baseServings": 4,
+      "difficulty": "适中",
+      "calories": null,
+      "category": "旬味暖炖",
+      "heroCta": "品鉴",
+      "footerNote": "鲜笃初春",
+      "tags": [
+        {
+          "name": "旬味暖炖",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "春笋当令",
+          "kind": "SEASON"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "咸肉",
+              "base": 200,
+              "unit": "g"
+            },
+            {
+              "name": "鲜五花肉",
+              "base": 300,
+              "unit": "g"
+            },
+            {
+              "name": "春笋",
+              "base": 3,
+              "unit": "根"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "姜片",
+              "base": 3,
+              "unit": "片"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "处理春笋与肉类",
+          "body": "春笋剥壳切块并焯水，鲜肉与咸肉分别处理，先尝咸肉的咸度再决定是否浸泡。"
+        },
+        {
+          "title": "焯水去咸",
+          "body": "咸肉切块焯水去多余盐分，鲜肉另锅焯净血沫。",
+          "chipLabel": "约 15 分钟",
+          "timerSeconds": 900,
+          "inferred": true
+        },
+        {
+          "title": "慢笃出鲜",
+          "body": "两肉加姜片与水小火笃 40 分钟，下春笋再笃至汤色奶白。",
+          "chipLabel": "慢火熟成",
+          "timerSeconds": 2400,
+          "timerLabel": "慢笃推荐时延",
+          "noteText": "春笋后放才脆嫩",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ],
+      "isFavorite": false,
+      "cookCount": 0
+    },
+    {
+      "title": "香煎芦笋罗勒暖沙拉",
+      "subtitle": "爽脆轻食 · 清爽蔬食",
+      "cover": "drawable:recipe_asparagus_salad",
+      "cookTimeMinutes": 12,
+      "baseServings": 2,
+      "difficulty": "新手友好",
+      "calories": null,
+      "category": "轻卡减脂",
+      "heroCta": "品鉴",
+      "footerNote": "爽脆轻食",
+      "tags": [
+        {
+          "name": "轻卡减脂",
+          "kind": "CATEGORY"
+        },
+        {
+          "name": "清爽蔬食",
+          "kind": "SEASON"
+        }
+      ],
+      "groups": [
+        {
+          "name": "主料生鲜",
+          "ingredients": [
+            {
+              "name": "芦笋",
+              "base": 200,
+              "unit": "g"
+            },
+            {
+              "name": "新鲜罗勒",
+              "base": 10,
+              "unit": "片"
+            }
+          ]
+        },
+        {
+          "name": "配料调味",
+          "ingredients": [
+            {
+              "name": "特级初榨橄榄油",
+              "base": 15,
+              "unit": "ml"
+            },
+            {
+              "name": "柠檬汁",
+              "base": 10,
+              "unit": "ml"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": "处理芦笋与罗勒",
+          "body": "芦笋切去老根，较粗的下段削去老皮。罗勒洗净沥干。"
+        },
+        {
+          "title": "煎香芦笋",
+          "body": "芦笋去老根，热锅少油煎至表面起虎皮、内部仍脆。",
+          "chipLabel": "火候精准",
+          "timerSeconds": 240,
+          "timerLabel": "煎制时延",
+          "noteText": "高温快煎才不软塌",
+          "inferred": true
+        },
+        {
+          "title": "拌入罗勒",
+          "body": "趁热淋橄榄油与柠檬汁，撒罗勒叶拌匀即可上桌。",
+          "chipLabel": "快手组装",
+          "inferred": true
+        },
+        {
+          "title": "检查与装盘",
+          "body": "确认主料达到合适的熟度，按自己的口味调整调味后装盘。尝一口，把想留给下次的小心得记下来。"
+        }
+      ],
+      "isFavorite": false,
+      "cookCount": 0
+    }
+  ],
+  "pantry": [
+    {
+      "name": "鸡蛋",
+      "note": "生鲜"
+    },
+    {
+      "name": "西红柿",
+      "note": "生鲜"
+    },
+    {
+      "name": "嫩豆腐",
+      "note": "生鲜"
+    },
+    {
+      "name": "三文鱼",
+      "note": "冷冻"
+    },
+    {
+      "name": "牛腩",
+      "note": "冷冻"
+    },
+    {
+      "name": "吐司",
+      "note": "烘焙"
+    },
+    {
+      "name": "芦笋",
+      "note": "生鲜"
+    },
+    {
+      "name": "柠檬",
+      "note": "生鲜"
+    },
+    {
+      "name": "黄油",
+      "note": "乳制品"
+    },
+    {
+      "name": "鲜牛奶",
+      "note": "乳制品"
+    },
+    {
+      "name": "迷迭香",
+      "note": "香草"
+    },
+    {
+      "name": "罗勒",
+      "note": "香草"
+    },
+    {
+      "name": "百里香",
+      "note": "香草"
+    },
+    {
+      "name": "肉桂粉",
+      "note": "调味"
+    },
+    {
+      "name": "海盐",
+      "note": "调味"
+    },
+    {
+      "name": "黑胡椒",
+      "note": "调味"
+    },
+    {
+      "name": "橄榄油",
+      "note": "调味"
+    }
+  ]
+}

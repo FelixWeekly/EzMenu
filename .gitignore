@@ -1,0 +1,47 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/app/build
+/shots/
+
+# Kotlin 增量编译状态
+.kotlin/
+
+# Packaged preview/release artifacts
+/dist/
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+**/google-services.json
+**/key.properties
+**/keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Dependencies and generated caches
+**/node_modules/
+**/.cache/
+/tools/.cache/
+**/__pycache__/
+*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/build/
+**/dist/
+
+# Local test output
+/portfolio/demo-test.txt

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 设计令牌的最小子集，供 XML 主题与启动图标使用。
+         完整 42 个 token 在 ui/theme/Color.kt 中以 Compose Color 定义。 -->
+    <color name="surface">#fff8f6</color>
+    <color name="ic_launcher_background">#ffdbcd</color>
+</resources>

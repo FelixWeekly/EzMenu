@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  自适应图标前景：一只碗 + 一株新芽，呼应「旬食 · 顺时而食」。
+  108×108 视口，内容控制在中心 72×72 安全区内。
+  正式启动图标在收尾阶段会按需要再打磨；此处已可直接用于 minSdk 26+。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 新芽（两片叶子） -->
+    <path
+        android:fillColor="#006c4a"
+        android:pathData="M54,30 C60,36 60,45 54,51 C48,45 48,36 54,30 Z" />
+    <path
+        android:fillColor="#006c4a"
+        android:pathData="M54,38 C60,38 65,42 66,48 C59,48 55,45 54,38 Z" />
+
+    <!-- 碗身 -->
+    <path
+        android:fillColor="#9f3d00"
+        android:pathData="M28,56 L80,56 A26,26 0 0 1 28,56 Z" />
+
+    <!-- 碗口高光 -->
+    <path
+        android:fillColor="#ffdbcd"
+        android:pathData="M30,53 L78,53 L78,56 L30,56 Z" />
+
+    <!-- 碗足 -->
+    <path
+        android:fillColor="#9f3d00"
+        android:pathData="M45,80 L63,80 L63,84 L45,84 Z" />
+</vector>

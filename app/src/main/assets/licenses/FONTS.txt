@@ -1,0 +1,53 @@
+
+== manrope.ttf ==
+
+
+Copyright 2019 The Manrope Project Authors (https://github.com/googlefonts/manrope)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org
+
+https://openfontlicense.org
+
+
+== material_symbols_filled.ttf ==
+
+
+Copyright 2026 Google LLC.  All Rights Reserved.
+
+
+== material_symbols_outlined.ttf ==
+
+
+Copyright 2026 Google LLC.  All Rights Reserved.
+
+
+== newsreader.ttf ==
+
+
+Copyright 2020 The Newsreader Project Authors (http://github.com/productiontype/Newsreader)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL
+
+http://scripts.sil.org/OFL
+
+
+== newsreader_italic.ttf ==
+
+
+Copyright 2020 The Newsreader Project Authors (http://github.com/productiontype/Newsreader)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL
+
+http://scripts.sil.org/OFL
+
+
+== serif_cjk_500.ttf ==
+
+
+Copyright 2020 The Newsreader Project Authors (http://github.com/productiontype/Newsreader)
+
+
+== serif_cjk_600.ttf ==
+
+
+Copyright 2020 The Newsreader Project Authors (http://github.com/productiontype/Newsreader)

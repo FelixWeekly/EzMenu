@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 用户决定：中文名「旬食」，英文名「EzMenu」。 -->
+    <string name="app_name">EzMenu</string>
+</resources>

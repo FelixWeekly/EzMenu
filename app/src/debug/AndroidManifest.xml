@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  debug 构建专用的附加清单。
+  把设计系统核对屏注册成一个可从 adb 拉起的 Activity，但它**不会进入 release 包**。
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity
+            android:name=".ui.dev.SpecimenActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+    </application>
+</manifest>

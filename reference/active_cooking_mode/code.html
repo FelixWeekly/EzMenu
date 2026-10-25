@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="zh-CN" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100%;height:100%;margin:0;padding:0;overflow:hidden;}body{overscroll-behavior:none;user-select:none;-webkit-user-select:none;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom, 8px) + 4px);}.pt-safe{padding-top:env(safe-area-inset-top, 0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "surface-container-high": "#efe6e4", "inverse-on-surface": "#f8efed", "secondary-fixed-dim": "#68dba9", "on-background": "#1e1b1a", "surface": "#fff8f6", "surface-variant": "#e9e1df", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "secondary-fixed": "#85f8c4", "surface-dim": "#e1d8d6", "primary-fixed-dim": "#ffb596", "on-tertiary-fixed": "#2f1500", "surface-tint": "#a33e00", "inverse-primary": "#ffb596", "on-secondary-fixed-variant": "#005137", "surface-container-low": "#fbf2f0", "tertiary-container": "#b15f00", "on-surface-variant": "#594137", "on-secondary": "#ffffff", "on-secondary-fixed": "#002114", "on-tertiary-container": "#fffbff", "outline": "#8d7165", "secondary": "#006c4a", "tertiary-fixed": "#ffdcc3", "on-tertiary-fixed-variant": "#6e3900", "inverse-surface": "#342f2e", "on-secondary-container": "#00714e", "primary-container": "#c74e00", "on-error": "#ffffff", "on-surface": "#1e1b1a", "on-primary-container": "#fffbff", "on-primary-fixed-variant": "#7c2e00", "background": "#fff8f6", "error": "#ba1a1a", "primary": "#9f3d00", "surface-container-highest": "#e9e1df", "tertiary-fixed-dim": "#ffb77d", "on-primary-fixed": "#360f00", "tertiary": "#8d4b00", "surface-container": "#f5ecea", "secondary-container": "#82f5c1", "surface-bright": "#fff8f6", "outline-variant": "#e1bfb2", "error-container": "#ffdad6", "primary-fixed": "#ffdbcd", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" }, "fontFamily": { "headline": ["Newsreader", "serif"], "body": ["Manrope", "sans-serif"] } } } };</script></head>
+<body class="bg-surface font-body text-on-surface flex justify-center items-center h-screen w-screen overflow-hidden antialiased">
+<!-- 20:9 现代手机视口标准容器 (基准 390px 宽，最大高度 866-880px 适配超窄高屏) -->
+<div class="relative w-full max-w-[410px] h-full max-h-[880px] bg-surface flex flex-col justify-between overflow-hidden shadow-2xl sm:border sm:border-outline-variant/40 sm:rounded-[36px]">
+<!-- 1. 顶部 HUD 状态区 (无冗余空间，安全视距一眼看清) -->
+<header class="pt-safe shrink-0 px-4 pt-2 pb-1.5 bg-surface/95 border-b border-surface-container-high/60 backdrop-blur-md z-30">
+<div class="flex items-center justify-between gap-2 h-11">
+<div class="flex items-center gap-2 min-w-0">
+<button aria-label="退出烹饪模式" class="h-9 px-3 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface flex items-center gap-1 transition-transform" onclick="history.back()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span class="text-xs font-bold tracking-tight">退出</span>
+</button>
+<div class="flex items-center gap-1.5 bg-primary-fixed/60 px-2.5 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-extrabold text-on-primary-fixed uppercase tracking-wider">Step 2/3</span>
+</div>
+</div>
+<!-- 微标状态：1米远距模式与隔空手势监听中 -->
+<div class="flex items-center gap-1.5">
+
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium tracking-wide"><span class="relative flex h-1.5 w-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary"></span></span><span class="">感应中</span></div>
+</div>
+</div>
+</header>
+<!-- 2. 核心步骤指引区 (大字高对比，核心一屏尽收眼底) -->
+<main class="flex-1 flex flex-col justify-between px-3.5 py-2 overflow-hidden gap-2">
+<!-- 主步骤卡片 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-surface-container-high/60 shadow-xs flex flex-col gap-3 shrink-0"><div class="flex items-center justify-between gap-2"><div class="flex items-center gap-2.5 min-w-0"><span class="text-[11px] font-bold text-primary tracking-widest uppercase">STEP 02</span><span class="w-1 h-1 rounded-full bg-outline-variant/60"></span><h1 class="font-headline text-[22px] font-semibold text-on-surface tracking-tight truncate">控温热锅与精准煎制</h1></div><button class="shrink-0 flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface-variant text-[11px] font-semibold transition-transform" id="chefTipBtn"><span class="material-symbols-outlined text-[14px] text-tertiary">lightbulb</span><span class="">锦囊</span></button></div><div class="flex items-center justify-between text-xs text-on-surface-variant py-0.5 border-b border-surface-container"><span class="flex items-center gap-1.5 font-medium"><span class="material-symbols-outlined text-[15px] text-primary">local_fire_department</span>中大火烧热，转文火慢煎</span><span class="text-[11px] text-on-surface-variant/80 font-medium">平底铸铁锅</span></div><div class="flex items-center gap-2 py-1 px-2.5 rounded-lg bg-surface-container-low text-on-surface-variant text-[12px]"><span class="material-symbols-outlined text-[15px] text-primary shrink-0">info</span><span class="font-medium tracking-tight truncate">鱼皮朝下贴锅底，3分钟内请勿翻动</span></div><div class="flex flex-col gap-2.5 pt-1"><div class="flex items-start gap-3"><span class="font-headline italic text-primary text-base font-bold shrink-0 w-4 text-center">1</span><p class="text-[15px] leading-relaxed text-on-surface">平底锅注入 <span class="font-semibold text-primary">15ml 橄榄油</span>，中大火热至微泛油纹 (180°C)。</p></div><div class="flex items-start gap-3"><span class="font-headline italic text-primary text-base font-bold shrink-0 w-4 text-center">2</span><p class="text-[15px] leading-relaxed text-on-surface">鱼皮朝下轻压入锅，轻压鱼身 <span class="font-semibold text-primary">5秒</span> 防卷并放入迷迭香。</p></div><div class="flex items-start gap-3"><span class="font-headline italic text-primary text-base font-bold shrink-0 w-4 text-center">3</span><p class="text-[15px] leading-relaxed text-on-surface font-medium">启动计时 <span class="font-semibold text-primary">03:00</span>，静待金黄酥脆，侧面白 1/3 时翻面。</p></div></div><div class="flex items-center gap-2 pt-2 border-t border-surface-container/80 text-[11px] text-on-surface-variant"><span class="font-medium shrink-0">物料</span><div class="flex items-center gap-1.5 overflow-hidden truncate"><span class="bg-surface-container-low px-2 py-0.5 rounded-md">橄榄油 15ml</span><span class="bg-surface-container-low px-2 py-0.5 rounded-md">迷迭香 2枝</span><span class="bg-surface-container-low px-2 py-0.5 rounded-md">厚切三文鱼 200g</span></div></div></div>
+<!-- 3. 核心厨房计时控制台 (黄金带收紧，物理级大触控键) -->
+<section class="bg-surface-container-lowest rounded-2xl p-3.5 border border-surface-container-high/60 shadow-xs flex flex-col justify-between shrink-0"><div class="flex items-center justify-between px-1 mb-1"><div class="flex items-center gap-1.5 text-xs font-semibold text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="">脆皮慢煎倒计时</span></div><span class="text-[11px] font-medium text-on-surface-variant/70">声控/按钮均可控制</span></div><div class="flex flex-col items-center justify-center py-2"><div class="flex items-baseline justify-center tracking-tight font-headline font-semibold text-on-surface"><span class="text-[52px] leading-none tracking-tight font-light" id="timerDigits">02:36</span><span class="text-xs font-body font-bold text-on-surface-variant ml-2 tracking-wider">MIN</span></div><div class="w-3/5 h-1 bg-surface-container-high rounded-full overflow-hidden mt-3"><div class="h-full bg-primary rounded-full transition-all" style="width: 78%;"></div></div></div><div class="grid grid-cols-3 gap-2 pt-1"><button class="h-11 rounded-xl bg-primary hover:bg-primary-container active:scale-95 text-on-primary font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-transform" id="timerToggleBtn" type="button"><span class="material-symbols-outlined text-[17px]" id="timerToggleIcon">pause</span><span id="timerToggleText" class="">暂停</span></button><button class="h-11 rounded-xl bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-semibold text-xs flex items-center justify-center gap-1 shadow-xs transition-transform" id="add30sBtn" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span class="">30秒</span></button><button class="h-11 rounded-xl bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface-variant font-semibold text-xs flex items-center justify-center gap-1 shadow-xs transition-transform" id="resetTimerBtn" type="button"><span class="material-symbols-outlined text-[16px]">restart_alt</span><span class="">重置</span></button></div></section>
+</main>
+<!-- 4. 底部交互底座 (固定于 20:9 视口底部，超大尺寸触控键 + 麦克风波纹) -->
+<footer class="pb-safe shrink-0 px-4 pt-2.5 bg-surface/95 border-t border-surface-container-high/60 backdrop-blur-md flex flex-col gap-2 z-30"><div class="flex items-center justify-center gap-1.5 text-on-surface-variant/80 text-[11px] font-medium tracking-wide"><span class="">左右挥手或呼叫“下一步”切换</span></div><div class="flex items-center gap-2.5 h-14 mb-1"><button class="flex-1 h-full rounded-2xl bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-semibold text-[15px] flex items-center justify-center gap-1.5 shadow-xs transition-transform" type="button"><span class="material-symbols-outlined text-[18px]">arrow_back</span><span class="">上一步</span></button><button aria-label="呼叫语音助手" class="w-14 h-full rounded-2xl bg-surface-container flex flex-col items-center justify-center active:scale-95 text-primary shadow-xs transition-transform shrink-0 relative overflow-hidden group" id="voiceWaveBtn" type="button"><span class="material-symbols-outlined text-[22px] animate-pulse">mic</span><span class="text-[9px] font-bold text-on-surface-variant tracking-wider">聆听</span></button><button class="flex-[1.3] h-full rounded-2xl bg-primary hover:bg-primary-container active:scale-95 text-on-primary font-bold text-[15px] flex items-center justify-center gap-1.5 shadow-sm transition-transform" type="button"><span class="">下一步</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div></footer>
+<!-- 手势反馈浮动 Toast -->
+<div class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full shadow-lg flex items-center gap-2" id="gestureFeedbackToast">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">check_circle</span>
+<span class="text-xs font-semibold" id="toastMessage">隔空手势检测成功</span>
+</div>
+<!-- 主厨锦囊模态弹窗 -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs flex items-end justify-center" id="chefModal">
+<div class="w-full max-w-[410px] bg-surface rounded-t-3xl p-5 shadow-2xl flex flex-col gap-3.5 pb-safe">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-primary font-headline text-lg font-bold">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+<span class="">主厨锦囊：鱼皮脆而不焦秘诀</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 text-xs leading-relaxed text-on-surface">
+<p class=""><span class="font-bold text-primary">1. 水分是脆皮天敌：</span> 下锅前务必用厨房纸彻底吸干鱼皮，必要时刀背刮去表面水分。</p>
+<p class=""><span class="font-bold text-primary">2. 切忌提前拨动：</span> 接触热锅初期会轻微黏连，煎至2分钟油脂焦化后鱼皮会自然脱模脱落。</p>
+<p class=""><span class="font-bold text-primary">3. 温度确认：</span> 投一片迷迭香叶入油，若立即细密泛泡并飘香即达下锅温度。</p>
+</div>
+<button class="w-full h-11 rounded-xl bg-primary text-on-primary font-bold text-sm shadow-md active:scale-95 transition-transform" id="confirmTipBtn" type="button">
+        我已了解，继续掌勺
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // 简易交互支持：锦囊开关与计时器暂停
+  const chefBtn = document.getElementById('chefTipBtn');
+  const modal = document.getElementById('chefModal');
+  const closeBtn = document.getElementById('closeModalBtn');
+  const confirmBtn = document.getElementById('confirmTipBtn');
+
+  function toggleModal(show) {
+    if (show) modal.classList.remove('hidden');
+    else modal.classList.add('hidden');
+  }
+
+  chefBtn?.addEventListener('click', () => toggleModal(true));
+  closeBtn?.addEventListener('click', () => toggleModal(false));
+  confirmBtn?.addEventListener('click', () => toggleModal(false));
+
+  const timerToggleBtn = document.getElementById('timerToggleBtn');
+  const timerToggleText = document.getElementById('timerToggleText');
+  const timerToggleIcon = document.getElementById('timerToggleIcon');
+  let isPaused = false;
+
+  timerToggleBtn?.addEventListener('click', () => {
+    isPaused = !isPaused;
+    if (isPaused) {
+      timerToggleText.textContent = '继续计时';
+      timerToggleIcon.textContent = 'play_arrow';
+      timerToggleBtn.classList.replace('bg-primary', 'bg-secondary');
+    } else {
+      timerToggleText.textContent = '暂停计时';
+      timerToggleIcon.textContent = 'pause';
+      timerToggleBtn.classList.replace('bg-secondary', 'bg-primary');
+    }
+  });
+</script>
+
+
+</body></html>

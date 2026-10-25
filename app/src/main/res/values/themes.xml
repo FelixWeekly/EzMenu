@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      用框架自带的 NoActionBar 主题做父级，避免引入 com.google.android.material 依赖。
+      真正的配色与排版由 Compose 侧的 EzMenuTheme 负责；这里只处理窗口背景、
+      状态栏/导航栏透明（配合 enableEdgeToEdge）与首帧前的底色。
+    -->
+    <style name="Theme.EzMenu" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/surface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

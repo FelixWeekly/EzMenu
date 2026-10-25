@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500;1,6..72,600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#9f3d00",
+          "on-background": "#1e1b1a",
+          "surface": "#fff8f6",
+          "primary-fixed-dim": "#ffb596",
+          "outline": "#8d7165",
+          "tertiary-fixed": "#ffdcc3",
+          "on-primary-fixed": "#360f00",
+          "error": "#ba1a1a",
+          "on-tertiary-fixed-variant": "#6e3900",
+          "surface-container-low": "#fbf2f0",
+          "surface-container-lowest": "#ffffff",
+          "inverse-on-surface": "#f8efed",
+          "on-surface-variant": "#594137",
+          "on-tertiary": "#ffffff",
+          "primary-container": "#c74e00",
+          "surface-tint": "#a33e00",
+          "on-primary": "#ffffff",
+          "on-error": "#ffffff",
+          "on-primary-container": "#fffbff",
+          "background": "#fff8f6",
+          "on-secondary-fixed-variant": "#005137",
+          "secondary-fixed": "#85f8c4",
+          "on-secondary-container": "#00714e",
+          "surface-bright": "#fff8f6",
+          "on-surface": "#1e1b1a",
+          "outline-variant": "#e1bfb2",
+          "on-primary-fixed-variant": "#7c2e00",
+          "surface-container-highest": "#e9e1df",
+          "surface-variant": "#e9e1df",
+          "on-error-container": "#93000a",
+          "error-container": "#ffdad6",
+          "surface-container": "#f5ecea",
+          "surface-dim": "#e1d8d6",
+          "tertiary-fixed-dim": "#ffb77d",
+          "tertiary-container": "#b15f00",
+          "primary-fixed": "#ffdbcd",
+          "secondary": "#006c4a",
+          "inverse-primary": "#ffb596",
+          "on-tertiary-container": "#fffbff",
+          "tertiary": "#8d4b00",
+          "surface-container-high": "#efe6e4",
+          "on-tertiary-fixed": "#2f1500",
+          "secondary-container": "#82f5c1",
+          "secondary-fixed-dim": "#68dba9",
+          "inverse-surface": "#342f2e",
+          "on-secondary": "#ffffff",
+          "on-secondary-fixed": "#002114"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "1.5rem",
+          "gutter-mobile": "0.75rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "margin-mobile": "1rem",
+          "gutter": "1rem",
+          "space-xl": "2.5rem",
+          "space-lg": "1.25rem"
+        },
+        "fontFamily": {
+          "display": ["Newsreader", "serif"],
+          "headline-sm": ["Newsreader", "serif"],
+          "display-mobile": ["Newsreader", "serif"],
+          "body-md": ["Manrope", "sans-serif"],
+          "label-lg": ["Manrope", "sans-serif"],
+          "headline-lg-mobile": ["Newsreader", "serif"],
+          "label-sm": ["Manrope", "sans-serif"],
+          "headline-md": ["Newsreader", "serif"],
+          "body-sm": ["Manrope", "sans-serif"],
+          "headline-lg": ["Newsreader", "serif"],
+          "label-md": ["Manrope", "sans-serif"],
+          "body-lg": ["Manrope", "sans-serif"]
+        }
+      }
+    }
+  };
+</script><style>
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff8f6;
+  }
+  body {
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 12px);
+  }
+  .pt-safe {
+    padding-top: max(env(safe-area-inset-top, 0px), 8px);
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col h-screen w-full selection:bg-primary-fixed selection:text-on-primary-fixed antialiased">
+<!-- 顶部固定导航条 (符合标准移动视口：返回键 + 新建菜谱 + 草稿箱/分享，无多余头像) -->
+<header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 pt-safe"><div class="h-12 px-4 flex items-center justify-between"><button aria-label="返回" class="w-9 h-9 -ml-1 flex items-center justify-center text-on-surface hover:text-primary transition-colors rounded-full active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-headline-sm text-[17px] text-on-surface font-semibold tracking-tight">编辑菜谱</h1><div class="flex items-center gap-1"><button aria-label="草稿箱" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full active:scale-95" onclick="showToast('草稿箱 (共 3 篇)')"><span class="material-symbols-outlined text-[20px]">drafts</span></button><button aria-label="分享" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors rounded-full active:scale-95" onclick="showToast('分享功能已就绪')"><span class="material-symbols-outlined text-[20px]">share</span></button></div></div></header>
+<!-- 中间自适应滚动容器：计算顶部与底部预留安全高度，严格适配 20:9 比例 -->
+<main class="flex-1 overflow-y-auto pt-[calc(3.5rem+env(safe-area-inset-top,0px))] pb-[calc(5.2rem+env(safe-area-inset-bottom,0px))] px-3.5 space-y-3.5">
+<!-- 灵感速记与 AI 识别栏 -->
+<div class="flex items-center justify-between pt-0.5 px-1 text-[12px]"><span class="font-headline-sm text-[15px] text-on-surface font-medium tracking-tight">美味创作</span><button class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant text-[11px] font-label-sm transition-all active:scale-95" onclick="openBatchImportModal()" type="button"><span class="material-symbols-outlined text-[13px] text-primary">auto_awesome</span><span class="">智能导入</span></button></div>
+<!-- 1. 菜谱基础资料：紧凑横向卡片 (左侧 96x96 方形封面上传预览，右侧自适应输入框，下方紧跟耗时与份量微调) -->
+<section class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/20 shadow-xs flex flex-col gap-3"><div class="flex items-start gap-3.5"><div class="relative w-[92px] h-[92px] rounded-xl overflow-hidden bg-surface-container-high shrink-0 group cursor-pointer border border-outline-variant/20 shadow-xs" id="coverUploadBox"><input accept="image/*" class="hidden" id="coverFileInput" type="file"><img alt="焦糖肉桂法式吐司封面" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" id="coverPreview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAann2mH3GhJS9_5nyAE0CDObCC2kZWH_q26XckVE4ago_6zjvZ2eM-fwg1JbADMKcE_q3lRvcC0jJUomF4L844Tu8Yi5Dskay9zzK3wWmANT4tSahuvTpcjsFy8Z9IcKZ0F-sh2Wvt9-By3MW2RevtpOQDxGn1wNilB9_I_JZA98WHbMpHE1_lwuMoJ4qBb2QBcb8TLrGw1GzZ-ULQHUpPWa3vat0Qwg9vfdVYWg"><div class="absolute inset-0 bg-inverse-surface/40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white text-[10px] backdrop-blur-[1px]"><span class="material-symbols-outlined text-[18px]">photo_camera</span><span class="font-label-sm">换封面</span></div></div><div class="flex-1 min-w-0 flex flex-col justify-between h-[92px] py-0.5"><div class="flex flex-col gap-1"><input class="w-full bg-transparent font-headline-md text-[18px] text-on-surface placeholder:text-outline-variant outline-none font-semibold tracking-tight focus:text-primary transition-colors pb-1 border-b border-surface-container-high" id="recipeTitle" placeholder="菜谱名称..." type="text" value="焦糖肉桂法式吐司"><input class="w-full bg-transparent text-[13px] font-body-sm text-on-surface-variant placeholder:text-outline-variant/70 outline-none leading-relaxed italic" id="recipeStory" placeholder="写下一句风味故事与灵感..." value="金黄酥脆包裹云朵蛋香，唤醒周末晨光"></div></div></div><div class="grid grid-cols-2 gap-2 pt-2 border-t border-surface-container-high/40"><div class="bg-surface-container-low rounded-xl px-2.5 py-1.5 flex items-center justify-between"><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="material-symbols-outlined text-[15px] text-tertiary">schedule</span><span class="font-label-sm text-[12px] text-on-surface font-semibold" id="cookTimeDisplay">30</span><span class="text-[11px] font-body-sm">分钟</span></div><div class="flex items-center gap-1"><button class="time-pill px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-[11px] font-label-sm hover:bg-primary-fixed transition-colors" onclick="quickSetTime(15, this)" type="button">15m</button><button class="time-pill px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold text-[11px] font-label-sm transition-colors" onclick="quickSetTime(30, this)" type="button">30m</button><button class="time-pill px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-[11px] font-label-sm hover:bg-primary-fixed transition-colors" onclick="quickSetTime(45, this)" type="button">45m</button></div></div><div class="bg-surface-container-low rounded-xl px-2.5 py-1.5 flex items-center justify-between"><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="material-symbols-outlined text-[15px] text-secondary">group</span><span class="font-label-sm text-[12px] text-on-surface font-semibold" id="portionCount">2</span><span class="text-[11px] font-body-sm">人份</span></div><div class="flex items-center gap-1"><button class="w-6 h-6 rounded-full bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-on-surface active:scale-90 transition-transform" id="portionMinus" type="button"><span class="material-symbols-outlined text-[13px]">remove</span></button><button class="w-6 h-6 rounded-full bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-on-surface active:scale-90 transition-transform" id="portionPlus" type="button"><span class="material-symbols-outlined text-[13px]">add</span></button></div></div></div></section>
+<!-- 2. 备料清单（核心）：紧凑单行高度，食材名 + 数值 + 单位快捷气泡 + 删除图标 -->
+<section class="space-y-2"><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><h2 class="font-headline-sm text-[15px] text-on-surface font-semibold">备料清单</h2><span class="text-[11px] font-label-sm text-outline" id="ingredientCountLabel">5 味食材</span></div><button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-[11px] font-label-sm hover:bg-primary-fixed-dim active:scale-95 transition-all" id="addIngredientBtn" type="button"><span class="material-symbols-outlined text-[13px]">add</span><span class="">加食材</span></button></div><div class="bg-surface-container-lowest rounded-2xl p-2 border border-outline-variant/20 shadow-xs flex flex-col gap-1" id="ingredientsList"><div class="ingredient-row flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-surface-container-low transition-colors gap-2"><div class="flex items-center gap-2 flex-1 min-w-0"><span class="material-symbols-outlined text-[15px] text-outline/50 cursor-grab">drag_indicator</span><input class="ing-name flex-1 min-w-0 bg-transparent text-[13px] font-body-md text-on-surface placeholder:text-outline-variant outline-none font-medium" placeholder="食材名称" type="text" value="厚切吐司"></div><div class="flex items-center gap-2 shrink-0"><input class="ing-amount w-10 text-right bg-transparent text-[13px] font-label-md text-primary outline-none font-semibold" placeholder="数量" type="text" value="2"><span class="ing-unit text-[12px] font-label-sm text-on-surface-variant min-w-[20px] text-center">片</span><button aria-label="删除食材" class="w-6 h-6 rounded-full flex items-center justify-center text-outline/60 hover:text-error active:scale-90 transition-all" onclick="deleteIngredient(this)" type="button"><span class="material-symbols-outlined text-[15px]">delete</span></button></div></div><div class="ingredient-row flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-surface-container-low transition-colors gap-2"><div class="flex items-center gap-2 flex-1 min-w-0"><span class="material-symbols-outlined text-[15px] text-outline/50 cursor-grab">drag_indicator</span><input class="ing-name flex-1 min-w-0 bg-transparent text-[13px] font-body-md text-on-surface placeholder:text-outline-variant outline-none font-medium" placeholder="食材名称" type="text" value="鲜牛奶"></div><div class="flex items-center gap-2 shrink-0"><input class="ing-amount w-10 text-right bg-transparent text-[13px] font-label-md text-primary outline-none font-semibold" placeholder="数量" type="text" value="80"><span class="ing-unit text-[12px] font-label-sm text-on-surface-variant min-w-[20px] text-center">ml</span><button aria-label="删除食材" class="w-6 h-6 rounded-full flex items-center justify-center text-outline/60 hover:text-error active:scale-90 transition-all" onclick="deleteIngredient(this)" type="button"><span class="material-symbols-outlined text-[15px]">delete</span></button></div></div><div class="ingredient-row flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-surface-container-low transition-colors gap-2"><div class="flex items-center gap-2 flex-1 min-w-0"><span class="material-symbols-outlined text-[15px] text-outline/50 cursor-grab">drag_indicator</span><input class="ing-name flex-1 min-w-0 bg-transparent text-[13px] font-body-md text-on-surface placeholder:text-outline-variant outline-none font-medium" placeholder="食材名称" type="text" value="有机鸡蛋"></div><div class="flex items-center gap-2 shrink-0"><input class="ing-amount w-10 text-right bg-transparent text-[13px] font-label-md text-primary outline-none font-semibold" placeholder="数量" type="text" value="1"><span class="ing-unit text-[12px] font-label-sm text-on-surface-variant min-w-[20px] text-center">颗</span><button aria-label="删除食材" class="w-6 h-6 rounded-full flex items-center justify-center text-outline/60 hover:text-error active:scale-90 transition-all" onclick="deleteIngredient(this)" type="button"><span class="material-symbols-outlined text-[15px]">delete</span></button></div></div><div class="ingredient-row flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-surface-container-low transition-colors gap-2"><div class="flex items-center gap-2 flex-1 min-w-0"><span class="material-symbols-outlined text-[15px] text-outline/50 cursor-grab">drag_indicator</span><input class="ing-name flex-1 min-w-0 bg-transparent text-[13px] font-body-md text-on-surface placeholder:text-outline-variant outline-none font-medium" placeholder="食材名称" type="text" value="黄油 (煎制用)"></div><div class="flex items-center gap-2 shrink-0"><input class="ing-amount w-10 text-right bg-transparent text-[13px] font-label-md text-primary outline-none font-semibold" placeholder="数量" type="text" value="15"><span class="ing-unit text-[12px] font-label-sm text-on-surface-variant min-w-[20px] text-center">克</span><button aria-label="删除食材" class="w-6 h-6 rounded-full flex items-center justify-center text-outline/60 hover:text-error active:scale-90 transition-all" onclick="deleteIngredient(this)" type="button"><span class="material-symbols-outlined text-[15px]">delete</span></button></div></div><div class="ingredient-row flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-surface-container-low transition-colors gap-2"><div class="flex items-center gap-2 flex-1 min-w-0"><span class="material-symbols-outlined text-[15px] text-outline/50 cursor-grab">drag_indicator</span><input class="ing-name flex-1 min-w-0 bg-transparent text-[13px] font-body-md text-on-surface placeholder:text-outline-variant outline-none font-medium" placeholder="食材名称" type="text" value="肉桂粉与细砂糖"></div><div class="flex items-center gap-2 shrink-0"><input class="ing-amount w-10 text-right bg-transparent text-[13px] font-label-md text-primary outline-none font-semibold" placeholder="数量" type="text" value="少许"><span class="ing-unit text-[12px] font-label-sm text-on-surface-variant min-w-[20px] text-center">适量</span><button aria-label="删除食材" class="w-6 h-6 rounded-full flex items-center justify-center text-outline/60 hover:text-error active:scale-90 transition-all" onclick="deleteIngredient(this)" type="button"><span class="material-symbols-outlined text-[15px]">delete</span></button></div></div></div></section>
+<!-- 3. 烹饪步骤指导（核心）：卡片化步骤（Step 01、Step 02），支持步骤小标题、简要说明、配图缩略图、计时器与火候标签，右侧提供上移/下移/删除轻量按钮 -->
+<section class="space-y-2.5"><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><h2 class="font-headline-sm text-[15px] text-on-surface font-semibold">烹饪步骤</h2><span class="text-[11px] font-label-sm text-outline" id="stepsCountBadge">2 个步骤</span></div><button class="inline-flex items-center gap-1 text-primary text-[12px] font-label-sm hover:underline" id="addStepBtn" type="button"><span class="material-symbols-outlined text-[15px]">add</span><span class="">增加步骤</span></button></div><div class="flex flex-col gap-2.5" id="stepsContainer"><div class="step-card bg-surface-container-lowest rounded-2xl p-3 shadow-xs flex flex-col gap-2.5 border border-outline-variant/20 transition-all"><div class="flex items-center justify-between pb-1.5 border-b border-surface-container-high/50"><div class="flex items-center gap-2 flex-1 min-w-0 mr-2"><span class="step-num font-headline-md text-[17px] text-primary italic font-serif shrink-0">Step 01</span><input class="step-title-input text-[13px] font-label-md text-on-surface bg-transparent outline-none placeholder:text-outline-variant flex-1 truncate font-medium" placeholder="步骤重点 (如：浸润蛋液)" value="蛋奶液充分浸润"></div><div class="flex items-center gap-0.5 shrink-0"><button class="w-6 h-6 rounded-full flex items-center justify-center text-outline/70 hover:text-on-surface transition-colors" onclick="moveStep(this, -1)" title="上移" type="button"><span class="material-symbols-outlined text-[14px]">arrow_upward</span></button><button class="w-6 h-6 rounded-full flex items-center justify-center text-outline/70 hover:text-on-surface transition-colors" onclick="moveStep(this, 1)" title="下移" type="button"><span class="material-symbols-outlined text-[14px]">arrow_downward</span></button><button aria-label="删除步骤" class="w-6 h-6 rounded-full flex items-center justify-center text-outline/70 hover:text-error transition-colors" onclick="deleteStep(this)" type="button"><span class="material-symbols-outlined text-[14px]">delete</span></button></div></div><div class="flex items-start gap-2.5"><div class="relative w-16 h-16 rounded-xl bg-surface-container-high shrink-0 overflow-hidden group cursor-pointer border border-outline-variant/20"><img alt="Step 1 preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwsTC49fIs44dp9fbFJDLSAQUjdNgPM4XEiWmeO6EAjZCZwxACkxN4VQSLdeMfY2U9KOtmZ_SLLlVUNwjT1IBOxAJG8B08MM8tGPiTZgWMyh4sziNt32Fm9ls1cEj_sK6EiVX5dwxkwR_6zvs7o4X-ie92zU0OyHLV_ogmhF20ILmKfeY4cjvhgYz2MgoskXcJ9wvzJefAvibsNp-mzcWTQQvymDwGOiv47_fxGg"><div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white"><span class="material-symbols-outlined text-[16px]">change_circle</span></div></div><div class="flex-1 min-w-0"><textarea class="w-full bg-transparent text-[12px] font-body-sm text-on-surface placeholder:text-outline-variant outline-none resize-none leading-relaxed" placeholder="描述此步骤的操作要点与火候细节..." rows="2">将鸡蛋、鲜牛奶与少许肉桂粉搅打均匀。吐司切厚片后两面均匀浸泡蛋奶液各3分钟。</textarea></div></div><div class="flex items-center justify-between pt-1 border-t border-surface-container-high/40 text-[11px]"><button class="timer-trigger px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm flex items-center gap-1 active:scale-95 transition-transform" onclick="toggleTimer(this)" type="button"><span class="material-symbols-outlined text-[13px]">timer</span><span class="">定时 3 分钟</span></button><span class="text-outline font-label-sm">建议吸透面包芯</span></div></div><div class="step-card bg-surface-container-lowest rounded-2xl p-3 shadow-xs flex flex-col gap-2.5 border border-outline-variant/20 transition-all"><div class="flex items-center justify-between pb-1.5 border-b border-surface-container-high/50"><div class="flex items-center gap-2 flex-1 min-w-0 mr-2"><span class="step-num font-headline-md text-[17px] text-primary italic font-serif shrink-0">Step 02</span><input class="step-title-input text-[13px] font-label-md text-on-surface bg-transparent outline-none placeholder:text-outline-variant flex-1 truncate font-medium" placeholder="步骤重点 (如：低温慢煎)" value="低温融化黄油慢煎"></div><div class="flex items-center gap-0.5 shrink-0"><button class="w-6 h-6 rounded-full flex items-center justify-center text-outline/70 hover:text-on-surface transition-colors" onclick="moveStep(this, -1)" title="上移" type="button"><span class="material-symbols-outlined text-[14px]">arrow_upward</span></button><button class="w-6 h-6 rounded-full flex items-center justify-center text-outline/70 hover:text-on-surface transition-colors" onclick="moveStep(this, 1)" title="下移" type="button"><span class="material-symbols-outlined text-[14px]">arrow_downward</span></button><button aria-label="删除步骤" class="w-6 h-6 rounded-full flex items-center justify-center text-outline/70 hover:text-error transition-colors" onclick="deleteStep(this)" type="button"><span class="material-symbols-outlined text-[14px]">delete</span></button></div></div><div class="flex items-start gap-2.5"><div class="relative w-16 h-16 rounded-xl bg-surface-container-high shrink-0 overflow-hidden group cursor-pointer border border-outline-variant/20"><img alt="Step 2 preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQUwuWPwZ6gpcYH8vg335S5imlZM5Q4XG4lx2FsC8jP7e_KPzGda8ZOK-RaeImuREog-g1RSfLyw4_fyKsuZVLPQl6smTxAhb2R1FOqKUO202aJYOiqWMIlaeqywo5efpPo2antBqYArZHmRD3KIYPbeUN076SXTtQvbuk_6ktK8_NAsU942dPdyXbSL8o5mX8BWsB9EwZeVZlqUew8R9H02RjWTu9upokahoSAg"><div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white"><span class="material-symbols-outlined text-[16px]">change_circle</span></div></div><div class="flex-1 min-w-0"><textarea class="w-full bg-transparent text-[12px] font-body-sm text-on-surface placeholder:text-outline-variant outline-none resize-none leading-relaxed" placeholder="描述此步骤的操作要点与火候细节..." rows="2">铸铁锅小火融化黄油直至冒出细密香泡，放入浸透吐司，盖上锅盖文火慢煎至金黄翻面。</textarea></div></div><div class="flex items-center justify-between pt-1 border-t border-surface-container-high/40 text-[11px]"><button class="timer-trigger px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm flex items-center gap-1 active:scale-95 transition-transform" onclick="toggleTimer(this)" type="button"><span class="material-symbols-outlined text-[13px]">timer</span><span class="">定时 5 分钟</span></button><span class="text-outline font-label-sm">文火慢烘 加盖松软</span></div></div></div></section>
+<!-- 主厨贴士提醒轻卡片 -->
+
+</main>
+<!-- 4. 底部固定发布栏：固定吸底，暂存草稿次要按钮 + 发布菜谱主按钮，充足安全区 -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface/95 backdrop-blur-xl border-t border-outline-variant/30 pb-safe"><div class="max-w-md mx-auto px-4 py-2 flex items-center gap-3"><button class="flex-1 h-11 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-[13px] font-medium flex items-center justify-center gap-1.5 active:scale-95 transition-all" id="saveDraftBtn" type="button"><span class="material-symbols-outlined text-[17px] text-on-surface-variant">bookmark_border</span><span class="">暂存草稿</span></button><button class="flex-[1.4] h-11 rounded-full bg-primary text-on-primary font-label-md text-[14px] font-semibold flex items-center justify-center gap-1.5 shadow-md hover:bg-primary-container active:scale-[0.98] transition-all" id="publishRecipeBtn" type="button"><span class="material-symbols-outlined text-[18px]">check</span><span class="">发布菜谱</span></button></div></div>
+<!-- 轻量 Toast 提示框 -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 translate-y-2 flex items-center gap-2 px-3.5 py-2 rounded-full bg-inverse-surface text-inverse-on-surface shadow-xl text-[12px] font-label-md" id="toastBox">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">check_circle</span>
+<span id="toastMsg" class="">草稿已自动保存</span>
+</div>
+<!-- 批量食谱/食材文本识别 Modal 弹窗 -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs flex items-end justify-center" id="batchImportModal">
+<div class="w-full max-w-md bg-surface rounded-t-2xl p-4 shadow-2xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface">批量粘贴文本识别</h3>
+<p class="text-[11px] font-body-sm text-on-surface-variant">粘贴文字，AI 自动拆分为单行与克数</p>
+</div>
+</div>
+<button class="w-7 h-7 rounded-full flex items-center justify-center text-outline hover:text-on-surface" onclick="closeBatchImportModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<textarea class="w-full bg-surface-container-low rounded-xl p-2.5 text-[12px] font-body-sm text-on-surface placeholder:text-outline-variant outline-none resize-none leading-relaxed border border-outline-variant/40 focus:ring-1 focus:ring-primary" id="batchPasteText" placeholder="例如：
+厚切吐司 2片
+鲜牛奶 80ml
+有机鸡蛋 1颗" rows="3"></textarea>
+<div class="flex items-center justify-between gap-2">
+<button class="px-2 py-1 rounded bg-surface-container-high font-label-sm text-[11px] text-on-surface-variant hover:text-primary" onclick="fillPasteSample()" type="button">填入吐司样例</button>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface text-[12px] font-label-sm" onclick="closeBatchImportModal()" type="button">取消</button>
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary text-[12px] font-label-sm flex items-center gap-1 shadow-xs active:scale-95 transition-all" onclick="applyBatchIngredients()" type="button">
+<span class="material-symbols-outlined text-[14px]">magic_button</span>
+<span class="">解析并录入</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function showToast(msg) {
+    const box = document.getElementById('toastBox');
+    const msgEl = document.getElementById('toastMsg');
+    if (!box || !msgEl) return;
+    msgEl.innerText = msg;
+    box.classList.remove('opacity-0', 'translate-y-2');
+    box.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      box.classList.remove('opacity-100', 'translate-y-0');
+      box.classList.add('opacity-0', 'translate-y-2');
+    }, 2000);
+  }
+
+  // 封面上传预览
+  const coverBox = document.getElementById('coverUploadBox');
+  const coverInput = document.getElementById('coverFileInput');
+  const coverPreview = document.getElementById('coverPreview');
+  if (coverBox && coverInput) {
+    coverBox.addEventListener('click', () => coverInput.click());
+    coverInput.addEventListener('change', (e) => {
+      if (e.target.files && e.target.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+          coverPreview.src = ev.target.result;
+          showToast('封面图片已更新');
+        };
+        reader.readAsDataURL(e.target.files[0]);
+      }
+    });
+  }
+
+  // 耗时快捷胶囊
+  window.quickSetTime = function(mins, btn) {
+    const display = document.getElementById('cookTimeDisplay');
+    if (display) display.textContent = mins;
+    document.querySelectorAll('.time-pill').forEach(p => {
+      p.className = 'time-pill px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[11px] font-label-sm hover:bg-primary-fixed transition-colors';
+    });
+    if (btn) {
+      btn.className = 'time-pill px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-semibold text-[11px] font-label-sm transition-colors';
+    }
+    showToast(`烹饪耗时已设为 ${mins} 分钟`);
+  };
+
+  // 份量调节
+  const minusBtn = document.getElementById('portionMinus');
+  const plusBtn = document.getElementById('portionPlus');
+  const portionCount = document.getElementById('portionCount');
+  let portions = 2;
+  if (minusBtn && plusBtn && portionCount) {
+    minusBtn.addEventListener('click', () => {
+      if (portions > 1) {
+        portions--;
+        portionCount.textContent = portions;
+      }
+    });
+    plusBtn.addEventListener('click', () => {
+      if (portions < 20) {
+        portions++;
+        portionCount.textContent = portions;
+      }
+    });
+  }
+
+  // 单位快捷切换
+  window.setRowUnit = function(btn, unit) {
+    const row = btn.closest('.ingredient-row');
+    if (row) {
+      const unitSpan = row.querySelector('.ing-unit');
+      if (unitSpan) unitSpan.textContent = unit;
+      showToast(`单位切换为 ${unit}`);
+    }
+  };
+
+  // 食材删除与更新
+  const ingredientsList = document.getElementById('ingredientsList');
+  const countLabel = document.getElementById('ingredientCountLabel');
+  function updateIngredientCount() {
+    if (!ingredientsList || !countLabel) return;
+    const total = ingredientsList.querySelectorAll('.ingredient-row').length;
+    countLabel.textContent = `(共 ${total} 味)`;
+  }
+  window.deleteIngredient = function(btn) {
+    const row = btn.closest('.ingredient-row');
+    if (row) {
+      row.remove();
+      updateIngredientCount();
+    }
+  };
+
+  // 食材添加
+  const addIngredientBtn = document.getElementById('addIngredientBtn');
+  if (addIngredientBtn && ingredientsList) {
+    addIngredientBtn.addEventListener('click', () => {
+      const row = document.createElement('div');
+      row.className = 'ingredient-row flex items-center justify-between px-2 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high/60 transition-colors gap-2';
+      row.innerHTML = `
+        <div class="flex items-center gap-1.5 flex-1 min-w-0">
+          <span class="material-symbols-outlined text-[16px] text-outline/70 cursor-grab">drag_indicator</span>
+          <input class="ing-name flex-1 min-w-0 bg-transparent text-[13px] font-body-md text-on-surface placeholder:text-outline-variant outline-none font-medium" placeholder="食材名称" type="text" value="">
+        </div>
+        <div class="flex items-center gap-1.5 shrink-0">
+          <input class="ing-amount w-10 text-right bg-transparent text-[13px] font-label-md text-primary outline-none font-semibold" placeholder="数值" type="text" value="10">
+          <span class="ing-unit text-[12px] font-label-sm text-on-surface-variant min-w-[16px] text-center">克</span>
+          <div class="flex items-center gap-0.5">
+            <button type="button" onclick="setRowUnit(this, '克')" class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px] font-label-sm hover:bg-primary-fixed transition-colors">克</button>
+            <button type="button" onclick="setRowUnit(this, '勺')" class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px] font-label-sm hover:bg-primary-fixed transition-colors">勺</button>
+          </div>
+          <button aria-label="删除食材" class="w-6 h-6 rounded-full flex items-center justify-center text-outline hover:text-error active:scale-90 transition-all ml-0.5" onclick="deleteIngredient(this)" type="button">
+            <span class="material-symbols-outlined text-[15px]">delete</span>
+          </button>
+        </div>
+      `;
+      ingredientsList.appendChild(row);
+      updateIngredientCount();
+      const input = row.querySelector('.ing-name');
+      if (input) input.focus();
+    });
+  }
+
+  // 步骤重新编号
+  const stepsContainer = document.getElementById('stepsContainer');
+  const stepsCountBadge = document.getElementById('stepsCountBadge');
+  function reindexSteps() {
+    if (!stepsContainer) return;
+    const cards = stepsContainer.querySelectorAll('.step-card');
+    cards.forEach((card, idx) => {
+      const numEl = card.querySelector('.step-num');
+      if (numEl) {
+        const num = String(idx + 1).padStart(2, '0');
+        numEl.textContent = `Step ${num}`;
+      }
+    });
+    if (stepsCountBadge) stepsCountBadge.textContent = `(共 ${cards.length} 步)`;
+  }
+
+  window.moveStep = function(btn, direction) {
+    const card = btn.closest('.step-card');
+    if (!card) return;
+    if (direction === -1 && card.previousElementSibling) {
+      card.parentNode.insertBefore(card, card.previousElementSibling);
+      reindexSteps();
+      showToast('步骤已上移');
+    } else if (direction === 1 && card.nextElementSibling) {
+      card.parentNode.insertBefore(card.nextElementSibling, card);
+      reindexSteps();
+      showToast('步骤已下移');
+    }
+  };
+
+  window.cloneStep = function(btn) {
+    const card = btn.closest('.step-card');
+    if (!card) return;
+    const clone = card.cloneNode(true);
+    card.parentNode.insertBefore(clone, card.nextElementSibling);
+    reindexSteps();
+    showToast('已复制该步骤');
+  };
+
+  window.deleteStep = function(btn) {
+    const card = btn.closest('.step-card');
+    if (card) {
+      card.remove();
+      reindexSteps();
+      showToast('已删除步骤');
+    }
+  };
+
+  window.toggleTimer = function(btn) {
+    if (btn.classList.contains('bg-primary-fixed')) {
+      btn.className = 'timer-trigger px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-[11px] font-label-sm flex items-center gap-1 active:scale-95 transition-transform';
+      btn.innerHTML = '<span class="material-symbols-outlined text-[13px]">timer</span><span>添加计时</span>';
+      showToast('已取消计时闹钟');
+    } else {
+      btn.className = 'timer-trigger px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[11px] font-label-sm flex items-center gap-1 active:scale-95 transition-transform';
+      btn.innerHTML = '<span class="material-symbols-outlined text-[13px]">timer</span><span>定时：5分钟</span>';
+      showToast('已开启 5 分钟烹饪闹钟');
+    }
+  };
+
+  const addStepBtn = document.getElementById('addStepBtn');
+  if (addStepBtn && stepsContainer) {
+    addStepBtn.addEventListener('click', () => {
+      const card = document.createElement('div');
+      card.className = 'step-card bg-surface-container-lowest rounded-xl p-3 shadow-xs flex flex-col gap-2 border border-outline-variant/30 transition-all';
+      card.innerHTML = `
+        <div class="flex items-center justify-between pb-1 border-b border-surface-container-high/60">
+          <div class="flex items-center gap-2 flex-1 min-w-0 mr-2">
+            <span class="step-num font-headline-md text-[17px] text-primary italic font-serif shrink-0">Step 00</span>
+            <input class="step-title-input text-[13px] font-label-md text-on-surface bg-surface-container-low px-2 py-0.5 rounded outline-none placeholder:text-outline-variant flex-1 truncate" placeholder="输入要点 (如: 装盘点缀)" value="">
+          </div>
+          <div class="flex items-center gap-0.5 shrink-0">
+            <button type="button" onclick="moveStep(this, -1)" title="上移步骤" class="w-6 h-6 rounded-full flex items-center justify-center text-outline hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[15px]">arrow_upward</span>
+            </button>
+            <button type="button" onclick="moveStep(this, 1)" title="下移步骤" class="w-6 h-6 rounded-full flex items-center justify-center text-outline hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[15px]">arrow_downward</span>
+            </button>
+            <button type="button" onclick="cloneStep(this)" title="复制此步" class="w-6 h-6 rounded-full flex items-center justify-center text-outline hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[15px]">content_copy</span>
+            </button>
+            <button aria-label="删除步骤" class="w-6 h-6 rounded-full flex items-center justify-center text-outline hover:text-error transition-colors ml-0.5" onclick="deleteStep(this)" type="button">
+              <span class="material-symbols-outlined text-[15px]">delete</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <div class="relative w-16 h-16 rounded-lg bg-surface-container-high shrink-0 overflow-hidden flex flex-col items-center justify-center text-outline-variant hover:text-primary cursor-pointer border border-dashed border-outline-variant/50">
+            <span class="material-symbols-outlined text-[20px]">add_photo_alternate</span>
+            <span class="text-[10px] font-label-sm">配图</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <textarea class="w-full bg-transparent text-[12px] font-body-sm text-on-surface placeholder:text-outline-variant outline-none resize-none leading-relaxed" placeholder="描述此步骤的操作要点与火候细节..." rows="2"></textarea>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-1 border-t border-surface-container-high/60">
+          <div class="flex items-center gap-1.5">
+            <button class="timer-trigger px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-[11px] font-label-sm flex items-center gap-1 active:scale-95 transition-transform" onclick="toggleTimer(this)" type="button">
+              <span class="material-symbols-outlined text-[13px]">timer</span>
+              <span>添加计时</span>
+            </button>
+          </div>
+          <span class="text-[11px] font-label-sm text-outline">小火细调</span>
+        </div>
+      `;
+      stepsContainer.appendChild(card);
+      reindexSteps();
+      const ta = card.querySelector('textarea');
+      if (ta) ta.focus();
+    });
+  }
+
+  window.insertRestStep = function() {
+    if (!stepsContainer) return;
+    const tip = document.createElement('div');
+    tip.className = 'step-card bg-surface-container-low border border-secondary/30 rounded-xl p-2.5 shadow-xs flex items-start gap-2';
+    tip.innerHTML = `
+      <span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">hourglass_top</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center justify-between">
+          <span class="text-[12px] font-label-md text-on-surface font-semibold">静置醒味提醒</span>
+          <button type="button" onclick="this.closest('.step-card').remove();" class="text-outline hover:text-error"><span class="material-symbols-outlined text-[15px]">close</span></button>
+        </div>
+        <input type="text" placeholder="如：浸润后静置2分钟让蛋液渗透至面包芯..." class="w-full bg-transparent text-[11px] font-body-sm text-on-surface outline-none placeholder:text-outline-variant mt-0.5" value="浸透后的吐司静置2分钟让蛋液渗透至面包芯。">
+      </div>
+    `;
+    stepsContainer.appendChild(tip);
+    showToast('已插入静置贴士');
+  };
+
+  // 批量粘贴模态窗口
+  window.openBatchImportModal = function() {
+    const m = document.getElementById('batchImportModal');
+    if (m) m.classList.remove('hidden');
+  };
+  window.closeBatchImportModal = function() {
+    const m = document.getElementById('batchImportModal');
+    if (m) m.classList.add('hidden');
+  };
+  window.fillPasteSample = function() {
+    const ta = document.getElementById('batchPasteText');
+    if (ta) ta.value = "厚切吐司 2片\n鲜牛奶 80ml\n有机鸡蛋 1颗\n黄油 15克\n肉桂粉 适量";
+  };
+  window.applyBatchIngredients = function() {
+    const ta = document.getElementById('batchPasteText');
+    if (!ta || !ta.value.trim()) {
+      showToast('请先输入或粘贴文本');
+      return;
+    }
+    showToast('✨ 智能识别成功！食材已更新');
+    closeBatchImportModal();
+  };
+
+  // 底部草稿与发布按钮
+  const saveDraftBtn = document.getElementById('saveDraftBtn');
+  const publishRecipeBtn = document.getElementById('publishRecipeBtn');
+  if (saveDraftBtn) {
+    saveDraftBtn.addEventListener('click', () => {
+      showToast('草稿已安全暂存');
+    });
+  }
+  if (publishRecipeBtn) {
+    publishRecipeBtn.addEventListener('click', () => {
+      const title = document.getElementById('recipeTitle')?.value.trim();
+      if (!title) {
+        showToast('请先填写菜谱名称');
+        return;
+      }
+      showToast('🎉 菜谱发布成功！已呈上美馔广场');
+    });
+  }
+</script>
+
+
+</body></html>

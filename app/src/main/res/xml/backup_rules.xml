@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自动备份规则（Android 11 及以下）。菜谱数据是用户创作，值得备份。 -->
+<full-backup-content>
+    <include domain="database" path="." />
+    <include domain="file" path="covers" />
+    <include domain="file" path="datastore" />
+    <include domain="sharedpref" path="." />
+</full-backup-content>
